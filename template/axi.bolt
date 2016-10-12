@@ -12,7 +12,7 @@ else
     export nppn=24    
 fi
 
-export PBS_O_WORKDIR=/work/n08/n08/kuangdai/AxiSEM3D_RUNS/__JOBNAME__
+export PBS_O_WORKDIR=/work/n08/n08/kuangdai/AxiSEM3D_RUNS/__SUBDIR__/__JOBNAME__
 cd ${PBS_O_WORKDIR}
 
 source archer_setup.sh
