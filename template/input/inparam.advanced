@@ -66,6 +66,10 @@ DD_COMM_VOL_METIS                           false
 # plot domain decomposition (Mathematica .nb)
 DD_PLOT_DOMAIN_DECOMPOSITION                false
 
+# report cost measurements of elements and points
+DD_REPORT_COST_MEASUREMENTS                 true
+
+
 
 # ============================== simulation options ==============================
 # verbose level [none / essential / detailed]

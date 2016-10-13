@@ -1,9 +1,9 @@
 export T0=10
 export model=prem_ani
 export nproc=24
-export wtime="1:0:0"
+export wtime="0:30:0"
 export subdir="ellip"
-export jname=pr2_10_off
+export jname=pr2_10_geo
 
 if [ $((${nproc}%24)) -gt 0 ]; then
     export nnode=$((${nproc}/24+1))
