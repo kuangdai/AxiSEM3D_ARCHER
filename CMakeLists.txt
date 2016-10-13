@@ -271,6 +271,8 @@ add_executable(
     src/3d_model/3d_oceanload/crust1/OceanLoad3D_crust1.cpp
 )
 
+set(CMAKE_CXX_FLAGS_RELEASE "-Ofast -funroll-loops -DNDEBUG")
+
 ############# link #############        
 target_link_libraries(
     axisem3d 
