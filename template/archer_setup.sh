@@ -1,5 +1,7 @@
 module swap PrgEnv-cray PrgEnv-gnu
 
+module swap gcc gcc/6.1.0
+
 module load cmake/3.5.2
 
 module load fftw

@@ -31,7 +31,7 @@ NU_CONST                                    2
 
 # =================================== empirical ==================================
 # use an empirical equation to determine Nu(s, z)
-# Eqn. (69) in Kuangdai et al. (2016)
+# Eqn. (69) in Kuangdai et al., Geophys. J. Int. (2016), Efficient global wave...  
 # This empirical equation proves efficient and robust for global tomographic models.
 # We suggest users simply increase/decrease NU_EMP_REF for better accuracy/performance. 
 # A few trial simulations are aften needed for a certain combination of models. 
