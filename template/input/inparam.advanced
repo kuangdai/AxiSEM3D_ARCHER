@@ -53,9 +53,8 @@ OUT_DUMP_INTERVAL                           1000
 
 
 # ============================= domain decomposition =============================
-# balance solid and fluid domain individually
-# this option is deprecated. Keep it as FALSE
-DD_BALANCE_SOLID_FLUID                      false
+# balance elemental and point-wise operations individually
+DD_BALANCE_ELEMENT_POINT                    true
 
 # number of candidate partitionings that metis will compute
 DD_NPART_METIS                              50
