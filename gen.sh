@@ -15,7 +15,6 @@ mkdir ../AxiSEM3D_RUNS/${subdir}
 mkdir ../AxiSEM3D_RUNS/${subdir}/${jname}
 rsync -r --force --delete template/ ../AxiSEM3D_RUNS/${subdir}/${jname}/
 
-perl -pi -w -e "s/__t0__/${T0}/g;"            ../AxiSEM3D_RUNS/${subdir}/${jname}/input/CMTSOLUTION
 perl -pi -w -e "s/__t0__/${T0}/g;"            ../AxiSEM3D_RUNS/${subdir}/${jname}/input/inparam.basic
 perl -pi -w -e "s/__model__/${model}/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname}/input/inparam.basic
 perl -pi -w -e "s/__NPROC__/${nproc}/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname}/axi.bolt
