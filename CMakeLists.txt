@@ -139,6 +139,7 @@ include_directories(
     src/3d_model/3d_volumetric
     src/3d_model/3d_volumetric/s20_s40rts
     src/3d_model/3d_volumetric/crust1
+    src/3d_model/3d_volumetric/simple_shapes
     src/3d_model/3d_geometric
     src/3d_model/3d_geometric/ellipticity
     src/3d_model/3d_geometric/crust1
@@ -261,6 +262,7 @@ add_executable(
     src/3d_model/3d_volumetric/s20_s40rts/Volumetric3D_s20rts.cpp
     src/3d_model/3d_volumetric/s20_s40rts/Volumetric3D_s40rts.cpp
     src/3d_model/3d_volumetric/crust1/Volumetric3D_crust1.cpp
+    src/3d_model/3d_volumetric/simple_shapes/Volumetric3D_bubble.cpp
     
     src/3d_model/3d_geometric/Geometric3D.cpp
     src/3d_model/3d_geometric/ellipticity/Ellipticity.cpp
