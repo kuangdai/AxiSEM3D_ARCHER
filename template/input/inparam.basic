@@ -19,10 +19,10 @@ MODEL_VOLUMETRIC_3D_NUM                     0
 # list of volumetric 3D models
 # Only the first MODEL_VOLUMETRIC_3D_NUM models will be used.
 # A volumetric model may fall into one of the following four types: 
-#   Absolute: absolute vs, vp and rho values 
-#   Reference1D: perturbations w.r.t. the 1D reference model (defined in MODEL_EXODUS_MESH_FILE)
-#   Reference3D: perturbations w.r.t. the current 3D model
-#   ReferenceDiff: perturbations w.r.t. the current 3D perturbations
+#   Absolute:       absolute vs, vp and rho values 
+#   Reference1D:    perturbations w.r.t. the 1D reference model (MODEL_EXODUS_MESH_FILE)
+#   Reference3D:    perturbations w.r.t. the current 3D model
+#   ReferenceDiff:  perturbations w.r.t. the current 3D perturbations
 # Absolute and Reference1D models overwrites the previous models if they overlap in space,
 # while Reference3D and ReferenceDiff are based on the previous models. 
 # Therefore, the order of this list DOES matter.
