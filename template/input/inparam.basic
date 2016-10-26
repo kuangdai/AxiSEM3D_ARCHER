@@ -17,21 +17,23 @@ MODEL_EXODUS_MESH_FILE                      meshes/__model___spherical_2D___t0__
 MODEL_VOLUMETRIC_3D_NUM                     0
 
 # list of volumetric 3D models
-# A volumetric model may fall into three types: Absolute, Reference1D and Reference3D
-# Absolute: absolute vs, vp and rho values 
-# Reference1D: perturbations w.r.t. the 1D reference model defined in MODEL_EXODUS_MESH_FILE
-# Reference3D: perturbations w.r.t. the current 3D model
-# Absolute and Reference1D overwrites previous models if they overlap in space,
-# while Reference3D is based on previous models. So the order of this list DOES matter.
 # Only the first MODEL_VOLUMETRIC_3D_NUM models will be used.
+# A volumetric model may fall into one of the following four types: 
+#   Absolute: absolute vs, vp and rho values 
+#   Reference1D: perturbations w.r.t. the 1D reference model (defined in MODEL_EXODUS_MESH_FILE)
+#   Reference3D: perturbations w.r.t. the current 3D model
+#   ReferenceDiff: perturbations w.r.t. the current 3D perturbations
+# Absolute and Reference1D models overwrites the previous models if they overlap in space,
+# while Reference3D and ReferenceDiff are based on the previous models. 
+# Therefore, the order of this list DOES matter.
 MODEL_VOLUMETRIC_3D_LIST                    s40rts crust1
 
 # number of geometric 3D models
 MODEL_GEOMETRIC_3D_NUM                      0
 
 # names of geometric 3D models
-# All geometric models superpose, so the order of this list is not important.
 # Only the first MODEL_GEOMETRIC_3D_NUM models will be used.
+# All geometric models superpose, so the order of this list is not important.
 MODEL_GEOMETRIC_3D_LIST                     crust1
 
 # ellipticity mode [off / geographic / full]
