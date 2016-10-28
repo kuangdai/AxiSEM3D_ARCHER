@@ -34,7 +34,7 @@ SET(USE_DOUBLE FALSE)
 #   All simulations share the same wisdoms, so do not change this directory 
 #   unless you want FFTW to learn from start.
 #   Do not copy wisdom files to another machine. 
-SET(FFTW_WISDOM_DIR /Users/Shared/fftw_wisdom_dir)
+SET(FFTW_WISDOM_DIR /work/n08/n08/kuangdai/AxiSEM3D_ARCHER/fftw_wisdom_dir)
 ##################################### EDITABLE #####################################
 
 
