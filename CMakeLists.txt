@@ -27,6 +27,14 @@ SET(NPOL 4)
 
 # solver precision
 SET(USE_DOUBLE FALSE)
+
+# directory to store FFTW wisdom files
+#   FFTW will start to accumulate wisdom since the first time you run AxiSEM3D.
+#   Specify any directory that does not require a `sudo` to write.
+#   All simulations share the same wisdoms, so do not change this directory 
+#   unless you want FFTW to learn from start.
+#   Do not copy wisdom files to another machine. 
+SET(FFTW_WISDOM_DIR /Users/Shared/fftw_wisdom_dir)
 ##################################### EDITABLE #####################################
 
 
@@ -39,6 +47,9 @@ ADD_DEFINITIONS(-D_NPOL=${NPOL})
 if (USE_DOUBLE)
     ADD_DEFINITIONS(-D_USE_DOUBLE)
 endif ()
+
+# FFTW wisdom dir
+ADD_DEFINITIONS(-D_FFTW_WISDOM_DIR=\"${FFTW_WISDOM_DIR}\")
 
 # SOURCE DIR
 ADD_DEFINITIONS(-D_PROJECT_DIR=\"${PROJECT_SOURCE_DIR}\")
@@ -67,7 +78,7 @@ include_directories(${FFTW_INCLUDE_DIR})
 # boost
 set(Boost_USE_MULTITHREADED ON)
 if (SERIAL_BUILD)
-    find_package(Boost COMPONENTS serialization filesystem system timer chrono REQUIRED)
+    find_package(Boost COMPONENTS filesystem system timer chrono REQUIRED)
 else ()
     find_package(Boost COMPONENTS mpi serialization filesystem system timer chrono REQUIRED)
 endif ()
@@ -156,6 +167,7 @@ add_executable(
     src/ftz.c
     
     ############################## core ##############################
+    src/core/fftw/SolverFFTW.cpp
     src/core/fftw/SolverFFTW_1.cpp
     src/core/fftw/SolverFFTW_3.cpp
     src/core/fftw/SolverFFTW_N3.cpp
