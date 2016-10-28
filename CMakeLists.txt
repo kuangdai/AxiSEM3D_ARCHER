@@ -31,9 +31,9 @@ SET(USE_DOUBLE FALSE)
 # directory to store FFTW wisdom files
 #   FFTW will start to accumulate wisdom since the first time you run AxiSEM3D.
 #   Specify any directory that does not require a `sudo` to write.
-#   All simulations share the same wisdoms, so do not change this directory 
-#   unless you want FFTW to learn from start.
-#   Do not copy wisdom files to another machine. 
+#   All simulations share the same wisdoms. Do not change this directory 
+#   unless you want FFTW to learn from zero, e.g., when you have FFTW updated.
+#   Do not copy wisdom files to another infrastructure (machine). 
 SET(FFTW_WISDOM_DIR /work/n08/n08/kuangdai/AxiSEM3D_ARCHER/fftw_wisdom_dir)
 ##################################### EDITABLE #####################################
 
