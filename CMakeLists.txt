@@ -1,3 +1,7 @@
+# CMakeLists.txt
+# created by Kuangdai on 26-Mar-2016 
+# CMakeLists.txt for AxiSEM3D
+
 cmake_minimum_required(VERSION 3.0.0)
 project(AxiSEM3D)
 enable_language(Fortran)
@@ -8,7 +12,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # Please only try to edit within this block. 
 # If something is missing add it.
 
-# compiler suites
+# compiler suit
 SET(CMAKE_C_COMPILER           cc)
 SET(CMAKE_CXX_COMPILER         CC)
 SET(CMAKE_Fortran_COMPILER     ftn)
@@ -29,11 +33,8 @@ SET(NPOL 4)
 SET(USE_DOUBLE FALSE)
 
 # directory to store FFTW wisdom files
-#   FFTW will start to accumulate wisdom since the first time you run AxiSEM3D.
-#   Specify any directory that does not require a `sudo` to write.
-#   All simulations share the same wisdoms. Do not change this directory 
-#   unless you want FFTW to learn from zero, e.g., when you have FFTW updated.
-#   Do not copy wisdom files to another infrastructure (machine). 
+# Specify any directory that does not require a `sudo` to write.
+# Once set, it is not likely to be changed. See Mannual for details.
 SET(FFTW_WISDOM_DIR /work/n08/n08/kuangdai/AxiSEM3D_ARCHER/fftw_wisdom_dir)
 ##################################### EDITABLE #####################################
 
@@ -230,6 +231,7 @@ add_executable(
     src/preloop/utilities/Parameters.cpp
     src/preloop/utilities/PreloopGradient.cpp
     src/preloop/utilities/PreloopFFTW.cpp
+    src/preloop/utilities/XTimer.cpp
     
     src/preloop/spectral/SpectralConstants.cpp
     src/preloop/spectral/mapping/Mapping.cpp
