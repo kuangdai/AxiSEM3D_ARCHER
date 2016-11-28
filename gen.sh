@@ -5,10 +5,10 @@ export att_spec=true
 export cmt=CMTSOLUTION_XJCh_GCMT
 export station=STATIONS_XJCh
 # simulation
-export nproc=24
-export wtime="0:30:0"
-export subdir="ellip"
-export jname=pr2_10_geo
+export nproc=384
+export wtime="3:0:0"
+export subdir="xinjiang"
+export jname=gcmt_10_oldatt
 
 
 # copy
