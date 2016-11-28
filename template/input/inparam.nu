@@ -14,7 +14,7 @@
 # WHAT: Top-level type of Nu field
 # TYPE: constant / empirical / wisdom
 # NOTE: Use "constant" with NU_CONST = 2 for 1D and 2D models.
-NU_TYPE                                     constant
+NU_TYPE                                     empirical
 
 # WHAT: whether to use fftw "lucky" numbers
 # TYPE: bool
@@ -42,7 +42,7 @@ NU_CONST                                    2
 # WHAT: basic reference value
 # TYPE: integer
 # NOTE: increase/decrease this for better accuracy/performance
-NU_EMP_REF                                  32
+NU_EMP_REF                                  48
 
 # WHAT: global minimum value of Nu(s,z) 
 # TYPE: integer
@@ -69,10 +69,10 @@ NU_EMP_THETA_START                          0.0
 # NOTE: depth = 0 (surface)           => Fd = NU_EMP_FACTOR_SURF
 #       depth = NU_EMP_DEPHT_START    => Fd = NU_EMP_FACTOR_SURF
 #       depth = NU_EMP_DEPTH_END      => Fd = 1.0 
-NU_EMP_SCALE_DEPTH                          false
-NU_EMP_FACTOR_SURF                          2.0
-NU_EMP_DEPTH_START                          200.0
-NU_EMP_DEPTH_END                            300.0
+NU_EMP_SCALE_DEPTH                          true
+NU_EMP_FACTOR_SURF                          5.0
+NU_EMP_DEPTH_START                          300.0
+NU_EMP_DEPTH_END                            600.0
 
 
 
