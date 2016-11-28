@@ -43,4 +43,5 @@ perl -pi -w -e "s/__NNODE__/${nnode}/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname
 perl -pi -w -e "s/__JOBNAME__/${jname}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname}/axi.bolt
 perl -pi -w -e "s/__SUBDIR__/${subdir}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname}/axi.bolt
 perl -pi -w -e "s/__WALLTIME__/${wtime}/g;"   ../AxiSEM3D_RUNS/${subdir}/${jname}/axi.bolt
-
+perl -pi -w -e "s/__JOBNAME__/${jname}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname}/tar.bolt
+perl -pi -w -e "s/__SUBDIR__/${subdir}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname}/tar.bolt
