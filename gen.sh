@@ -21,11 +21,11 @@ perl -pi -w -e "s/__model__/${model}/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname
 if [ ${att_spec} == true ]; then
     perl -pi -w -e "s/__att_specfem__/true/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname}/input/inparam.advanced
     perl -pi -w -e "s/__att_kappa__/false/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname}/input/inparam.advanced
-    cp template/meshes_nr3/${model} ../AxiSEM3D_RUNS/${subdir}/${jname}/input/
+    cp meshes_nr3/${model} ../AxiSEM3D_RUNS/${subdir}/${jname}/input/
 else
     perl -pi -w -e "s/__att_specfem__/false/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname}/input/inparam.advanced
     perl -pi -w -e "s/__att_kappa__/true/g;"      ../AxiSEM3D_RUNS/${subdir}/${jname}/input/inparam.advanced
-    cp template/meshes_nr5/${model} ../AxiSEM3D_RUNS/${subdir}/${jname}/input/
+    cp meshes_nr5/${model} ../AxiSEM3D_RUNS/${subdir}/${jname}/input/
 fi
 
 # source
