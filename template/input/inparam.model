@@ -29,7 +29,6 @@ MODEL_3D_VOLUMETRIC_NUM                     2
 # TYPE: list of ParSeries <see top notes>
 # NOTE: The order in this list DOES matter, because a model may be based on previously
 #       defined ones or/and overwrite previous ones when they overlap in space.
-# MODEL_3D_VOLUMETRIC_LIST                    s40rts cylinder$2900$-18.75$191.25$$2881$-18.75$191.25$100$10$2$-.5$3$0$1$0 cylinder$2900$-18.75$191.25$$2881$-18.75$191.25$100$10$2$-.2$3$1$0$0 cylinder$2900$-18.75$191.25$$2881$-18.75$191.25$100$10$2$0.1$3$0$0$1
 MODEL_3D_VOLUMETRIC_LIST                    s40rts crust1
 
 # WHAT: number of geometric 3D models
