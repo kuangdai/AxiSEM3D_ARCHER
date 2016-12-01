@@ -35,7 +35,7 @@ SET(USE_DOUBLE FALSE)
 # directory to store FFTW wisdom files
 # Specify any directory that does not require a `sudo` to write.
 # Once set, it is not likely to be changed. See Mannual for details.
-SET(FFTW_WISDOM_DIR /work/n08/n08/kuangdai/AxiSEM3D_ARCHER/fftw_wisdom_dir)
+SET(FFTW_WISDOM_DIR /work/n08/n08/shared/AxiSEM3D_fftw_wisdom_DO_NOT_MODIFY)
 ##################################### EDITABLE #####################################
 
 
