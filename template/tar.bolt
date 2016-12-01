@@ -1,6 +1,6 @@
 #!/bin/bash --login
 #PBS -l select=serial=true:ncpus=1
-#PBS -l walltime=01:00:00
+#PBS -l walltime=04:00:00
 #PBS -A n08
 
 export PBS_O_WORKDIR=/work/n08/n08/kuangdai/AxiSEM3D_RUNS/__SUBDIR__/__JOBNAME__
