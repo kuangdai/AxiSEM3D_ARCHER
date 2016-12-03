@@ -290,6 +290,8 @@ add_executable(
 )
 
 set(CMAKE_CXX_FLAGS_RELEASE "-Ofast -funroll-loops -DNDEBUG")
+set(CMAKE_C_FLAGS_RELEASE "-Ofast -funroll-loops -DNDEBUG")
+set(CMAKE_Fortran_FLAGS_RELEASE "-Ofast -funroll-loops -DNDEBUG")
 
 ############# link #############        
 target_link_libraries(
