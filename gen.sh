@@ -5,9 +5,9 @@ export att_spec=true
 export cmt=CMTSOLUTION_XJCh_GCMT
 export station=STATIONS_XJCh
 # simulation
-export nproc=384
+export nproc=1536
 export wtime="3:0:0"
-export subdir="xinjiang"
+export subdir="nxj"
 export jname=gcmt_10_oldatt
 
 

@@ -272,7 +272,6 @@ add_executable(
     src/preloop/receiver/ReceiverCollection.cpp
     
     src/3d_model/3d_volumetric/Volumetric3D.cpp
-    src/3d_model/3d_volumetric/s20_s40rts/sX0rts_meta_data.f90
     src/3d_model/3d_volumetric/s20_s40rts/s20rts.f90
     src/3d_model/3d_volumetric/s20_s40rts/s40rts.f90
     src/3d_model/3d_volumetric/s20_s40rts/Volumetric3D_s20rts.cpp
@@ -289,6 +288,8 @@ add_executable(
     src/3d_model/3d_oceanload/const/OceanLoad3D_const.cpp
     src/3d_model/3d_oceanload/crust1/OceanLoad3D_crust1.cpp
 )
+
+set(CMAKE_CXX_FLAGS_RELEASE "-Ofast -funroll-loops -DNDEBUG")
 
 ############# link #############        
 target_link_libraries(
