@@ -10,6 +10,8 @@ export wtime="3:0:0"
 export subdir="nxj"
 export jname=gcmt_10_oldatt
 
+export submit=true
+
 
 # copy
 mkdir ../AxiSEM3D_RUNS/${subdir}
@@ -45,3 +47,9 @@ perl -pi -w -e "s/__SUBDIR__/${subdir}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname
 perl -pi -w -e "s/__WALLTIME__/${wtime}/g;"   ../AxiSEM3D_RUNS/${subdir}/${jname}/axi.bolt
 perl -pi -w -e "s/__JOBNAME__/${jname}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname}/tar.bolt
 perl -pi -w -e "s/__SUBDIR__/${subdir}/g;"    ../AxiSEM3D_RUNS/${subdir}/${jname}/tar.bolt
+
+if [ ${submit} == true ]; then
+    cd ../AxiSEM3D_RUNS/${subdir}/${jname}/
+    qsub axi.bolt
+    cd ../../../AxiSEM3D_ARCHER
+fi
